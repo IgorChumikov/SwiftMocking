@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		03221357A22900327A4386E3 /* Pods_SwiftMocking_SwiftMockingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F575C5373FEADFB355CA203 /* Pods_SwiftMocking_SwiftMockingUITests.framework */; };
 		8B1455C23781E28F7687FF0C /* Pods_SwiftMockingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57506250A4A0C30C99DF5D5 /* Pods_SwiftMockingTests.framework */; };
+		AC46CD3D2ADFF514006A67BB /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC46CD3C2ADFF514006A67BB /* ContentViewModel.swift */; };
+		AC46CD3F2ADFF59C006A67BB /* IContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC46CD3E2ADFF59C006A67BB /* IContentViewModel.swift */; };
 		ACCBE1432ADFEAF600D58005 /* SwiftMockingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCBE1422ADFEAF600D58005 /* SwiftMockingApp.swift */; };
 		ACCBE1452ADFEAF600D58005 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCBE1442ADFEAF600D58005 /* ContentView.swift */; };
 		ACCBE1472ADFEAF700D58005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACCBE1462ADFEAF700D58005 /* Assets.xcassets */; };
@@ -42,6 +44,8 @@
 		9769E6706AA8F2A6AEC53F41 /* Pods_SwiftMocking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftMocking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F575C5373FEADFB355CA203 /* Pods_SwiftMocking_SwiftMockingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftMocking_SwiftMockingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4EF242C2070A4E2281D5CF9 /* Pods-SwiftMockingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftMockingTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftMockingTests/Pods-SwiftMockingTests.release.xcconfig"; sourceTree = "<group>"; };
+		AC46CD3C2ADFF514006A67BB /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		AC46CD3E2ADFF59C006A67BB /* IContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IContentViewModel.swift; sourceTree = "<group>"; };
 		ACCBE13F2ADFEAF600D58005 /* SwiftMocking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMocking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCBE1422ADFEAF600D58005 /* SwiftMockingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMockingApp.swift; sourceTree = "<group>"; };
 		ACCBE1442ADFEAF600D58005 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,8 +110,33 @@
 				21408088B551663451382161 /* Pods-SwiftMockingTests.debug.xcconfig */,
 				A4EF242C2070A4E2281D5CF9 /* Pods-SwiftMockingTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		AC46CD392ADFF474006A67BB /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				AC46CD3B2ADFF502006A67BB /* ViewModels */,
+				AC46CD3A2ADFF4E4006A67BB /* Views */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		AC46CD3A2ADFF4E4006A67BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ACCBE1442ADFEAF600D58005 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AC46CD3B2ADFF502006A67BB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				AC46CD3C2ADFF514006A67BB /* ContentViewModel.swift */,
+				AC46CD3E2ADFF59C006A67BB /* IContentViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		ACCBE1362ADFEAF600D58005 = {
@@ -135,8 +164,8 @@
 		ACCBE1412ADFEAF600D58005 /* SwiftMocking */ = {
 			isa = PBXGroup;
 			children = (
+				AC46CD392ADFF474006A67BB /* Content */,
 				ACCBE1422ADFEAF600D58005 /* SwiftMockingApp.swift */,
-				ACCBE1442ADFEAF600D58005 /* ContentView.swift */,
 				ACCBE1462ADFEAF700D58005 /* Assets.xcassets */,
 				ACCBE1482ADFEAF700D58005 /* Preview Content */,
 			);
@@ -372,6 +401,8 @@
 			files = (
 				ACCBE1452ADFEAF600D58005 /* ContentView.swift in Sources */,
 				ACCBE1432ADFEAF600D58005 /* SwiftMockingApp.swift in Sources */,
+				AC46CD3F2ADFF59C006A67BB /* IContentViewModel.swift in Sources */,
+				AC46CD3D2ADFF514006A67BB /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
