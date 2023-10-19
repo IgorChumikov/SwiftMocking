@@ -19,7 +19,9 @@
 		ACCBE15E2ADFEAF700D58005 /* SwiftMockingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCBE15D2ADFEAF700D58005 /* SwiftMockingUITests.swift */; };
 		ACCBE1602ADFEAF700D58005 /* SwiftMockingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCBE15F2ADFEAF700D58005 /* SwiftMockingUITestsLaunchTests.swift */; };
 		ACF496762AE15F8A00F9FE22 /* AutoMockableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF496752AE15F8A00F9FE22 /* AutoMockableExtensions.swift */; };
-		ACF496802AE1654E00F9FE22 /* AutoMockable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4967F2AE1654E00F9FE22 /* AutoMockable.generated.swift */; };
+		ACF496832AE1692800F9FE22 /* AutoEquatableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF496822AE1692800F9FE22 /* AutoEquatableExtensions.swift */; };
+		ACF496852AE16BD000F9FE22 /* PostingActionButtonsStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF496842AE16BD000F9FE22 /* PostingActionButtonsStyle.swift */; };
+		ACF4968B2AE1715E00F9FE22 /* GeneratedContent in Resources */ = {isa = PBXBuildFile; fileRef = ACF4968A2AE1715E00F9FE22 /* GeneratedContent */; };
 		FDA6581803045A80E62A632C /* Pods_SwiftMocking_SwiftMockingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694FA4493D94A93987B71068 /* Pods_SwiftMocking_SwiftMockingUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +61,9 @@
 		ACCBE15D2ADFEAF700D58005 /* SwiftMockingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMockingUITests.swift; sourceTree = "<group>"; };
 		ACCBE15F2ADFEAF700D58005 /* SwiftMockingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMockingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ACF496752AE15F8A00F9FE22 /* AutoMockableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoMockableExtensions.swift; sourceTree = "<group>"; };
-		ACF4967F2AE1654E00F9FE22 /* AutoMockable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AutoMockable.generated.swift; path = SwiftMocking/AutoMockable.generated.swift; sourceTree = SOURCE_ROOT; };
+		ACF496822AE1692800F9FE22 /* AutoEquatableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoEquatableExtensions.swift; sourceTree = "<group>"; };
+		ACF496842AE16BD000F9FE22 /* PostingActionButtonsStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingActionButtonsStyle.swift; sourceTree = "<group>"; };
+		ACF4968A2AE1715E00F9FE22 /* GeneratedContent */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GeneratedContent; sourceTree = "<group>"; };
 		B0094C1AE96D223DFD403B06 /* Pods_SwiftMocking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftMocking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E084A23D3FCF33706C2806E9 /* Pods-SwiftMockingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftMockingTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftMockingTests/Pods-SwiftMockingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF263937C93F375D99AE8F89 /* Pods-SwiftMocking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftMocking.release.xcconfig"; path = "Target Support Files/Pods-SwiftMocking/Pods-SwiftMocking.release.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 			children = (
 				AC46CD3C2ADFF514006A67BB /* ContentViewModel.swift */,
 				AC46CD3E2ADFF59C006A67BB /* IContentViewModel.swift */,
+				ACF496842AE16BD000F9FE22 /* PostingActionButtonsStyle.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -168,7 +173,7 @@
 		ACCBE1412ADFEAF600D58005 /* SwiftMocking */ = {
 			isa = PBXGroup;
 			children = (
-				ACF496702AE14AB700F9FE22 /* AutoMockable */,
+				ACF496862AE16F2000F9FE22 /* Sources */,
 				AC46CD392ADFF474006A67BB /* Content */,
 				ACCBE1422ADFEAF600D58005 /* SwiftMockingApp.swift */,
 				ACCBE1462ADFEAF700D58005 /* Assets.xcassets */,
@@ -202,13 +207,30 @@
 			path = SwiftMockingUITests;
 			sourceTree = "<group>";
 		};
-		ACF496702AE14AB700F9FE22 /* AutoMockable */ = {
+		ACF496702AE14AB700F9FE22 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				ACF4967F2AE1654E00F9FE22 /* AutoMockable.generated.swift */,
 				ACF496752AE15F8A00F9FE22 /* AutoMockableExtensions.swift */,
 			);
-			path = AutoMockable;
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		ACF496812AE168EF00F9FE22 /* Equatable */ = {
+			isa = PBXGroup;
+			children = (
+				ACF496822AE1692800F9FE22 /* AutoEquatableExtensions.swift */,
+			);
+			path = Equatable;
+			sourceTree = "<group>";
+		};
+		ACF496862AE16F2000F9FE22 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				ACF4968A2AE1715E00F9FE22 /* GeneratedContent */,
+				ACF496702AE14AB700F9FE22 /* Mocks */,
+				ACF496812AE168EF00F9FE22 /* Equatable */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACF4968B2AE1715E00F9FE22 /* GeneratedContent in Resources */,
 				ACCBE14A2ADFEAF700D58005 /* Preview Assets.xcassets in Resources */,
 				ACCBE1472ADFEAF700D58005 /* Assets.xcassets in Resources */,
 			);
@@ -400,7 +423,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "chmod +x \"$PODS_ROOT/Sourcery/bin/sourcery\"\nchmod -R +r \"$PODS_ROOT/Sourcery/bin\"\n$PODS_ROOT/Sourcery/bin/sourcery --sources . --templates ./Pods/Sourcery/Templates/AutoMockable.stencil --output ./SwiftMocking\n";
+			shellScript = "$PODS_ROOT/Sourcery/bin/sourcery --sources . --templates /Users/igorcumikov/Documents/Projects/Разные/Git/SwiftMocking/Pods/Sourcery/Templates --output /Users/igorcumikov/Documents/Projects/Разные/Git/SwiftMocking/SwiftMocking/Sources/GeneratedContent\n";
 		};
 		CBEC2ABEA984E813D4376D38 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -432,8 +455,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACCBE1452ADFEAF600D58005 /* ContentView.swift in Sources */,
-				ACF496802AE1654E00F9FE22 /* AutoMockable.generated.swift in Sources */,
 				ACCBE1432ADFEAF600D58005 /* SwiftMockingApp.swift in Sources */,
+				ACF496832AE1692800F9FE22 /* AutoEquatableExtensions.swift in Sources */,
+				ACF496852AE16BD000F9FE22 /* PostingActionButtonsStyle.swift in Sources */,
 				AC46CD3F2ADFF59C006A67BB /* IContentViewModel.swift in Sources */,
 				AC46CD3D2ADFF514006A67BB /* ContentViewModel.swift in Sources */,
 				ACF496762AE15F8A00F9FE22 /* AutoMockableExtensions.swift in Sources */,
