@@ -6,10 +6,8 @@
 import Foundation
 #if os(iOS) || os(tvOS) || os(watchOS)
 import UIKit
-import SwiftUI
 #elseif os(OSX)
 import AppKit
-import SwiftUI
 #endif
 
 
@@ -38,16 +36,16 @@ import SwiftUI
 class IContentViewModelMock: IContentViewModel {
 
 
-    var image: Image {
-        get { return underlyingImage }
-        set(value) { underlyingImage = value }
-    }
-    var underlyingImage: (Image)!
     var text: String {
         get { return underlyingText }
         set(value) { underlyingText = value }
     }
     var underlyingText: (String)!
+    var text1: String {
+        get { return underlyingText1 }
+        set(value) { underlyingText1 = value }
+    }
+    var underlyingText1: (String)!
 
 
 }

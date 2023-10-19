@@ -13,10 +13,8 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            viewModel.image
-                .imageScale(.large)
-                .foregroundStyle(.tint)
             Text(viewModel.text)
+            Text(viewModel.text1)
         }
         .padding()
     }
@@ -25,7 +23,7 @@ struct ContentView: View {
 #Preview {
     ContentView(
         viewModel: ContentViewModel(
-            image: Image(systemName: "globe"),
-            text: "Hello, world!")
+            text: "Hello, world!",
+            text1: "Hello, world!")
     )
 }

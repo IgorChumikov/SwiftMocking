@@ -12,8 +12,8 @@ struct SwiftMockingApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView(viewModel: ContentViewModel(
-                image: Image(systemName: "globe"),
-                text: "Hello, world!")
+                text: "Hello, world!",
+                text1: "Hello, world!")
             )
         }
     }

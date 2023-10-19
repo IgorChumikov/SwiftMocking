@@ -13,13 +13,13 @@ import SwiftUI
 final class ContentViewModel: IContentViewModel {
     // MARK: - Properties
     
-    var image: Image = Image(systemName: "globe")
     var text: String = "Hello, world!"
+    var text1: String = "Hello, world!"
     
     // MARK: - Init
     
-    init(image: Image, text: String) {
-        self.image = image
+    init(text: String, text1: String) {
         self.text = text
+        self.text1 = text1
     }
 }
