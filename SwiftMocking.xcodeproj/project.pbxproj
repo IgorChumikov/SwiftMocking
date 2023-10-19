@@ -219,10 +219,10 @@
 			buildConfigurationList = ACCBE1632ADFEAF700D58005 /* Build configuration list for PBXNativeTarget "SwiftMocking" */;
 			buildPhases = (
 				8877D760A1206949316A7D89 /* [CP] Check Pods Manifest.lock */,
+				AC46CD452ADFFC89006A67BB /* ShellScript */,
 				ACCBE13B2ADFEAF600D58005 /* Sources */,
 				ACCBE13C2ADFEAF600D58005 /* Frameworks */,
 				ACCBE13D2ADFEAF600D58005 /* Resources */,
-				AC46CD452ADFFC89006A67BB /* ShellScript */,
 			);
 			buildRules = (
 			);
