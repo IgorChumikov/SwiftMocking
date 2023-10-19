@@ -10,7 +10,7 @@ import SwiftUI
 
 // MARK: - IContentViewModel
 
-protocol IContentViewModel {
+protocol IContentViewModel: AutoMockable {
     var image: Image { get }
     var text: String { get }
 }
