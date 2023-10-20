@@ -23,14 +23,16 @@ fileprivate func compareArrays<T>(lhs: [T], rhs: [T], compare: (_ lhs: T, _ rhs:
 
 
 // MARK: - AutoEquatable for classes, protocols, structs
-// MARK: - PostingActionButtonsStyle AutoEquatable
-extension PostingActionButtonsStyle: Equatable {}
-internal func == (lhs: PostingActionButtonsStyle, rhs: PostingActionButtonsStyle) -> Bool {
+// MARK: - Posting AutoEquatable
+extension Posting: Equatable {}
+internal func == (lhs: Posting, rhs: Posting) -> Bool {
+    guard lhs.productId == rhs.productId else { return false }
     guard lhs.title == rhs.title else { return false }
-    guard compareOptionals(lhs: lhs.subtitle, rhs: rhs.subtitle, compare: ==) else { return false }
-    guard lhs.backgroundColor == rhs.backgroundColor else { return false }
-    guard lhs.foregroundColor == rhs.foregroundColor else { return false }
-    guard lhs.isDisabled == rhs.isDisabled else { return false }
+    guard lhs.subtitle == rhs.subtitle else { return false }
+    guard lhs.bodyText == rhs.bodyText else { return false }
+    guard lhs.isError == rhs.isError else { return false }
+    guard lhs.labelPrimaryButton == rhs.labelPrimaryButton else { return false }
+    guard lhs.labelSecondaryButton == rhs.labelSecondaryButton else { return false }
     return true
 }
 

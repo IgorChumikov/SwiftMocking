@@ -21,7 +21,7 @@
 		ACCBE1542ADFEAF700D58005 /* SwiftMockingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCBE1532ADFEAF700D58005 /* SwiftMockingTests.swift */; };
 		ACCBE15E2ADFEAF700D58005 /* SwiftMockingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCBE15D2ADFEAF700D58005 /* SwiftMockingUITests.swift */; };
 		ACCBE1602ADFEAF700D58005 /* SwiftMockingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCBE15F2ADFEAF700D58005 /* SwiftMockingUITestsLaunchTests.swift */; };
-		ACF496852AE16BD000F9FE22 /* PostingActionButtonsStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF496842AE16BD000F9FE22 /* PostingActionButtonsStyle.swift */; };
+		ACF496852AE16BD000F9FE22 /* Posting.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF496842AE16BD000F9FE22 /* Posting.swift */; };
 		FDA6581803045A80E62A632C /* Pods_SwiftMocking_SwiftMockingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 694FA4493D94A93987B71068 /* Pods_SwiftMocking_SwiftMockingUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +63,7 @@
 		ACCBE1592ADFEAF700D58005 /* SwiftMockingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMockingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCBE15D2ADFEAF700D58005 /* SwiftMockingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMockingUITests.swift; sourceTree = "<group>"; };
 		ACCBE15F2ADFEAF700D58005 /* SwiftMockingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMockingUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		ACF496842AE16BD000F9FE22 /* PostingActionButtonsStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostingActionButtonsStyle.swift; sourceTree = "<group>"; };
+		ACF496842AE16BD000F9FE22 /* Posting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posting.swift; sourceTree = "<group>"; };
 		B0094C1AE96D223DFD403B06 /* Pods_SwiftMocking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftMocking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E084A23D3FCF33706C2806E9 /* Pods-SwiftMockingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftMockingTests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftMockingTests/Pods-SwiftMockingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF263937C93F375D99AE8F89 /* Pods-SwiftMocking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftMocking.release.xcconfig"; path = "Target Support Files/Pods-SwiftMocking/Pods-SwiftMocking.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +121,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AC394F4C2AE283DE00902597 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ACF496842AE16BD000F9FE22 /* Posting.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AC3A68492AE17F8400B580A2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +158,7 @@
 		AC46CD392ADFF474006A67BB /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				AC394F4C2AE283DE00902597 /* Models */,
 				AC46CD3B2ADFF502006A67BB /* ViewModels */,
 				AC46CD3A2ADFF4E4006A67BB /* Views */,
 			);
@@ -169,7 +178,6 @@
 			children = (
 				AC46CD3C2ADFF514006A67BB /* ContentViewModel.swift */,
 				AC46CD3E2ADFF59C006A67BB /* IContentViewModel.swift */,
-				ACF496842AE16BD000F9FE22 /* PostingActionButtonsStyle.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -457,7 +465,7 @@
 				AC3A68552AE17F8400B580A2 /* AutoEquatableExtensions.swift in Sources */,
 				ACCBE1452ADFEAF600D58005 /* ContentView.swift in Sources */,
 				ACCBE1432ADFEAF600D58005 /* SwiftMockingApp.swift in Sources */,
-				ACF496852AE16BD000F9FE22 /* PostingActionButtonsStyle.swift in Sources */,
+				ACF496852AE16BD000F9FE22 /* Posting.swift in Sources */,
 				AC46CD3F2ADFF59C006A67BB /* IContentViewModel.swift in Sources */,
 				AC3A68522AE17F8400B580A2 /* AutoMockableExtensions.swift in Sources */,
 				AC46CD3D2ADFF514006A67BB /* ContentViewModel.swift in Sources */,
