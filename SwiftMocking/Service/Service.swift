@@ -19,7 +19,7 @@ private enum Constants {
 
 final class Service: IService {
     func fetchCharacters() -> [Character] {
-        guard let url = URL(string: Constants.getCharacter) else { return [] }
+        guard let url = URL(string: "https://rickandmortyapi.com/api/character") else { return [] }
         
         let data = try? Data(contentsOf: url)
         let response = data.flatMap { try? JSONDecoder().decode(CharacterResponse.self, from: $0) }

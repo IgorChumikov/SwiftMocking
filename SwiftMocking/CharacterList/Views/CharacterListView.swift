@@ -25,7 +25,7 @@ struct CharacterListView: View {
         }
         .listStyle(.plain)
         .onAppear {
-            viewModel.fetchCharacters()
+            viewModel.getCharacters()
         }
     }
     
@@ -60,5 +60,5 @@ struct CharacterListView: View {
 }
 
 #Preview {
-    CharacterListView()
+    CharacterListView(viewModel: ICharacterListViewModelMock.forPreview as! CharacterListViewModel?)
 }

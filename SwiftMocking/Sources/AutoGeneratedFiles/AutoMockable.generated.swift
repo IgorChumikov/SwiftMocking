@@ -33,6 +33,26 @@ import AppKit
 
 
 
+class ICharacterListViewModelMock: ICharacterListViewModel {
+
+
+    var characters: [Character] = []
+
+
+    //MARK: - getCharacters
+
+    var getCharactersCallsCount = 0
+    var getCharactersCalled: Bool {
+        return getCharactersCallsCount > 0
+    }
+    var getCharactersClosure: (() -> Void)?
+
+    func getCharacters() {
+        getCharactersCallsCount += 1
+        getCharactersClosure?()
+    }
+
+}
 public class IServiceMock: IService {
 
     public init() {}

@@ -10,7 +10,7 @@ import Combine
 
 // MARK: - CharacterListViewModel
 
-final class CharacterListViewModel: ObservableObject {
+final class CharacterListViewModel: ICharacterListViewModel, ObservableObject {
     // MARK: - Properties
     
     @Published var characters: [Character] = []
@@ -24,7 +24,7 @@ final class CharacterListViewModel: ObservableObject {
     
     // MARK: - Functions
 
-    func fetchCharacters() {
+    func getCharacters() {
         self.characters = service.fetchCharacters()
     }
 }
