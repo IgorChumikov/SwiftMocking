@@ -23,16 +23,34 @@ fileprivate func compareArrays<T>(lhs: [T], rhs: [T], compare: (_ lhs: T, _ rhs:
 
 
 // MARK: - AutoEquatable for classes, protocols, structs
-// MARK: - Posting AutoEquatable
-extension Posting: Equatable {}
-internal func == (lhs: Posting, rhs: Posting) -> Bool {
-    guard lhs.productId == rhs.productId else { return false }
-    guard lhs.title == rhs.title else { return false }
-    guard lhs.subtitle == rhs.subtitle else { return false }
-    guard lhs.bodyText == rhs.bodyText else { return false }
-    guard lhs.isError == rhs.isError else { return false }
-    guard lhs.labelPrimaryButton == rhs.labelPrimaryButton else { return false }
-    guard lhs.labelSecondaryButton == rhs.labelSecondaryButton else { return false }
+// MARK: - Character AutoEquatable
+extension Character: Equatable {}
+public func == (lhs: Character, rhs: Character) -> Bool {
+    guard lhs.id == rhs.id else { return false }
+    guard lhs.name == rhs.name else { return false }
+    guard lhs.status == rhs.status else { return false }
+    guard lhs.species == rhs.species else { return false }
+    guard lhs.type == rhs.type else { return false }
+    guard lhs.gender == rhs.gender else { return false }
+    guard lhs.origin == rhs.origin else { return false }
+    guard lhs.location == rhs.location else { return false }
+    guard lhs.image == rhs.image else { return false }
+    guard lhs.episode == rhs.episode else { return false }
+    guard lhs.url == rhs.url else { return false }
+    guard lhs.created == rhs.created else { return false }
+    return true
+}
+// MARK: - CharacterResponse AutoEquatable
+extension CharacterResponse: Equatable {}
+internal func == (lhs: CharacterResponse, rhs: CharacterResponse) -> Bool {
+    guard lhs.results == rhs.results else { return false }
+    return true
+}
+// MARK: - Location AutoEquatable
+extension Location: Equatable {}
+public func == (lhs: Location, rhs: Location) -> Bool {
+    guard lhs.name == rhs.name else { return false }
+    guard lhs.url == rhs.url else { return false }
     return true
 }
 

@@ -33,19 +33,28 @@ import AppKit
 
 
 
-class IContentViewModelMock: IContentViewModel {
+public class IServiceMock: IService {
+
+    public init() {}
 
 
-    var text: String {
-        get { return underlyingText }
-        set(value) { underlyingText = value }
+
+    //MARK: - fetchCharacters
+
+    public var fetchCharactersCallsCount = 0
+    public var fetchCharactersCalled: Bool {
+        return fetchCharactersCallsCount > 0
     }
-    var underlyingText: (String)!
-    var text1: String {
-        get { return underlyingText1 }
-        set(value) { underlyingText1 = value }
-    }
-    var underlyingText1: (String)!
+    public var fetchCharactersReturnValue: [Character]!
+    public var fetchCharactersClosure: (() -> [Character])?
 
+    public func fetchCharacters() -> [Character] {
+        fetchCharactersCallsCount += 1
+        if let fetchCharactersClosure = fetchCharactersClosure {
+            return fetchCharactersClosure()
+        } else {
+            return fetchCharactersReturnValue
+        }
+    }
 
 }

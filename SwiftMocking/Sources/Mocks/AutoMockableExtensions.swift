@@ -8,4 +8,4 @@
 
 import Foundation
 
-extension IContentViewModel {}
+extension IService {}

@@ -8,4 +8,7 @@
 
 import Foundation
 
-extension Posting {}
+extension CharacterResponse {}
+extension Character {}
+extension Location {}
+

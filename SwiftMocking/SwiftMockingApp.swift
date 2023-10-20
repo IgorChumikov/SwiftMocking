@@ -11,10 +11,7 @@ import SwiftUI
 struct SwiftMockingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: ContentViewModel(
-                text: "Hello, world!",
-                text1: "Hello, world!")
-            )
+            CharacterListView(viewModel: CharacterListViewModel())
         }
     }
 }
