@@ -15,7 +15,9 @@ private enum Constants {
     static let getCharacter: String = "https://rickandmortyapi.com/api/character"
 }
 
-class Service: IService {
+// MARK: - Service
+
+final class Service: IService {
     func fetchCharacters() -> [Character] {
         guard let url = URL(string: Constants.getCharacter) else { return [] }
         

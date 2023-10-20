@@ -8,10 +8,21 @@
 import SwiftUI
 import Combine
 
+// MARK: - CharacterListViewModel
+
 final class CharacterListViewModel: ObservableObject {
+    // MARK: - Properties
+    
     @Published var characters: [Character] = []
-    private var cancellables: Set<AnyCancellable> = []
-    private let service = Service()
+    private let service: IService
+    
+    // MARK: - Init
+    
+    init(service: IService) {
+        self.service = service
+    }
+    
+    // MARK: - Functions
 
     func fetchCharacters() {
         self.characters = service.fetchCharacters()

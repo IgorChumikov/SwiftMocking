@@ -7,8 +7,14 @@
 
 import SwiftUI
 
+// MARK: - CharacterListView
+
 struct CharacterListView: View {
-    @StateObject var viewModel = CharacterListViewModel()
+    // MARK: - Properties
+    
+    @StateObject var viewModel = CharacterListViewModel(service: Service())
+    
+    // MARK: - Content
     
     var body: some View {
         List(viewModel.characters) { character in
@@ -22,6 +28,8 @@ struct CharacterListView: View {
             viewModel.fetchCharacters()
         }
     }
+    
+    // MARK: - Private Views
     
     private func infoCharacter(character: Character) -> some View {
         VStack(alignment: .leading, spacing: 6) {
