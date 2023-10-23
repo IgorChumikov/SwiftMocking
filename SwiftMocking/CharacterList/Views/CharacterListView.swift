@@ -60,5 +60,7 @@ struct CharacterListView: View {
 }
 
 #Preview {
-    CharacterListView(viewModel: ICharacterListViewModelMock.forPreview as! CharacterListViewModel?)
+    CharacterListView(
+        viewModel: CharacterListViewModel(service: Service())
+    )
 }

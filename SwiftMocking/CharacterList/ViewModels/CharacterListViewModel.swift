@@ -10,7 +10,7 @@ import Combine
 
 // MARK: - CharacterListViewModel
 
-final class CharacterListViewModel: ICharacterListViewModel, ObservableObject {
+final class CharacterListViewModel: ObservableObject {
     // MARK: - Properties
     
     @Published var characters: [Character] = []
