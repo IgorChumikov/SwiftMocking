@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4E6E96A84342CC9F067D489C /* Pods_SwiftMocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0094C1AE96D223DFD403B06 /* Pods_SwiftMocking.framework */; };
 		5D9CEFC0493A721BBBC934AA /* Pods_SwiftMockingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346984B3A39FA7B4C444FE2B /* Pods_SwiftMockingTests.framework */; };
+		AC1993262AE6B14D002BF8B3 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1993252AE6B14D002BF8B3 /* Store.swift */; };
+		AC1993282AE6B179002BF8B3 /* AnyObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1993272AE6B179002BF8B3 /* AnyObservableObject.swift */; };
 		AC394F4E2AE28EA400902597 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC394F4D2AE28EA400902597 /* Location.swift */; };
 		AC394F512AE2900400902597 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC394F502AE2900400902597 /* Service.swift */; };
 		AC394F532AE2904900902597 /* CharacterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC394F522AE2904900902597 /* CharacterResponse.swift */; };
@@ -56,6 +58,8 @@
 		48D6602A4F5C4D4ED788EA0D /* Pods-SwiftMockingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftMockingTests.release.xcconfig"; path = "Target Support Files/Pods-SwiftMockingTests/Pods-SwiftMockingTests.release.xcconfig"; sourceTree = "<group>"; };
 		694FA4493D94A93987B71068 /* Pods_SwiftMocking_SwiftMockingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftMocking_SwiftMockingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		844E2B2F45299FD424CAB050 /* Pods-SwiftMocking-SwiftMockingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftMocking-SwiftMockingUITests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftMocking-SwiftMockingUITests/Pods-SwiftMocking-SwiftMockingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC1993252AE6B14D002BF8B3 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		AC1993272AE6B179002BF8B3 /* AnyObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyObservableObject.swift; sourceTree = "<group>"; };
 		AC394F4D2AE28EA400902597 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		AC394F502AE2900400902597 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		AC394F522AE2904900902597 /* CharacterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterResponse.swift; sourceTree = "<group>"; };
@@ -135,6 +139,23 @@
 				48D6602A4F5C4D4ED788EA0D /* Pods-SwiftMockingTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		AC1993232AE6B123002BF8B3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AC1993242AE6B12D002BF8B3 /* PropertyWrappers */,
+				AC1993272AE6B179002BF8B3 /* AnyObservableObject.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AC1993242AE6B12D002BF8B3 /* PropertyWrappers */ = {
+			isa = PBXGroup;
+			children = (
+				AC1993252AE6B14D002BF8B3 /* Store.swift */,
+			);
+			path = PropertyWrappers;
 			sourceTree = "<group>";
 		};
 		AC394F4C2AE283DE00902597 /* Models */ = {
@@ -262,6 +283,7 @@
 		ACCBE1412ADFEAF600D58005 /* SwiftMocking */ = {
 			isa = PBXGroup;
 			children = (
+				AC1993232AE6B123002BF8B3 /* Helpers */,
 				AC3A68492AE17F8400B580A2 /* Sources */,
 				AC46CD392ADFF474006A67BB /* CharacterList */,
 				AC394F4F2AE28F8500902597 /* Service */,
@@ -519,6 +541,7 @@
 			files = (
 				AC394F682AE2C02A00902597 /* AutoEquatable.generated.swift in Sources */,
 				AC3A68552AE17F8400B580A2 /* AutoEquatableExtensions.swift in Sources */,
+				AC1993282AE6B179002BF8B3 /* AnyObservableObject.swift in Sources */,
 				AC394F672AE2C02A00902597 /* AutoMockable.generated.swift in Sources */,
 				AC394F552AE2934F00902597 /* CharacterListViewModel.swift in Sources */,
 				AC394F5E2AE2B36700902597 /* AutoMoclablePreviewViewModelExtensions.swift in Sources */,
@@ -527,6 +550,7 @@
 				AC394F4E2AE28EA400902597 /* Location.swift in Sources */,
 				ACCBE1432ADFEAF600D58005 /* SwiftMockingApp.swift in Sources */,
 				ACF496852AE16BD000F9FE22 /* Character.swift in Sources */,
+				AC1993262AE6B14D002BF8B3 /* Store.swift in Sources */,
 				AC394F512AE2900400902597 /* Service.swift in Sources */,
 				AC394F602AE2B42B00902597 /* ICharacterListViewModel.swift in Sources */,
 				AC3A68522AE17F8400B580A2 /* AutoMockableExtensions.swift in Sources */,
