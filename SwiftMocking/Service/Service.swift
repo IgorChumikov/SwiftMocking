@@ -8,13 +8,6 @@
 import Foundation
 import Combine
 
-
-// MARK: - Constants
-
-private enum Constants {
-    static let getCharacter: String = "https://rickandmortyapi.com/api/character"
-}
-
 // MARK: - Service
 
 final class Service: IService {
