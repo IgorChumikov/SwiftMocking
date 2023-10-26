@@ -38,4 +38,15 @@ final class SwiftMockingTests: XCTestCase {
         XCTAssertEqual(service.fetchCharactersCalled, true)
         XCTAssertEqual(service.fetchCharactersReturnValue.isEmpty, true)
     }
+    
+    func testStartCharacterListCallGetCharactersTwoTimes() {
+        // When
+        viewModel.getCharacters()
+        viewModel.getCharacters()
+        
+        // Then
+        XCTAssertEqual(service.fetchCharactersCallsCount, 2)
+        XCTAssertEqual(service.fetchCharactersCalled, true)
+        XCTAssertEqual(service.fetchCharactersReturnValue.isEmpty, true)
+    }
 }
