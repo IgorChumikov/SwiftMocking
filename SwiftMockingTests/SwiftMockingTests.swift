@@ -16,6 +16,7 @@ final class SwiftMockingTests: XCTestCase {
     override func setUp() {
         super.setUp()
         service = .init()
+        service.fetchCharactersReturnValue = []
         viewModel = CharacterListViewModel(service: service)
     }
     
